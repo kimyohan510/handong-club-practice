@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>동아리 가입 신청</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Pretendard', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: #fcf8f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .form-container {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .form-header img {
+      width: 50px;
+      margin-bottom: 8px;
+    }
+
+    .form-header h1 {
+      font-size: 24px;
+      color: #4b2e2e;
+      margin: 0;
+    }
+
+    .form-header button {
+      margin-top: 12px;
+      padding: 8px 16px;
+      background-color: #d86c2d;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 4px;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .two-columns {
+      display: flex;
+      gap: 16px;
+    }
+
+    .two-columns > div {
+      flex: 1;
+    }
+
+    .submit-btn {
+      margin-top: 24px;
+      width: 100%;
+      background-color: #d86c2d;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #b7541f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-header">
+    <img src="https://img.icons8.com/ios-filled/50/000000/handshake.png" alt="icon" />
+    <h1>동아리 가입 신청</h1>
+
+  <form class="form-container" action="#" method="POST">
+    <div class="two-columns">
+      <div>
+        <label for="name-ko">이름</label>
+        <input type="text" id="name-ko" name="name-ko" placeholder="한글" required />
+      </div>
+      <div>
+        <label for="name-en">나이</label>
+        <input type="text" id="name-en" name="name-en" placeholder="나이" />
+      </div>
+    </div>
+
+    <div class="two-columns">
+      <div>
+        <label for="student-id">학번</label>
+        <input type="text" id="student-id" name="student-id" placeholder="2023XXXX" required />
+      </div>
+      <div>
+        <label for="major">소속 전공</label>
+        <input type="text" id="major" name="major" placeholder="전공" required />
+      </div>
+    </div>
+
+    <div class="two-columns">
+      <div>
+        <label for="phone">연락처</label>
+        <input type="text" id="phone" name="phone" placeholder="010-XXXX-XXXX" required />
+      </div>
+      <div>
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" placeholder="example@handong.edu" />
+      </div>
+    </div>
+
+    <label for="year">학년</label>
+    <input type="text" id="year" name="year" placeholder="1 / 2 / 3 / 4학년" />
+
+    <label for="motivation">지원 동기</label>
+    <textarea id="motivation" name="motivation" placeholder="동아리에 지원하게 된 계기를 자유롭게 작성해주세요."></textarea>
+
+    <button type="submit" class="submit-btn">제출</button>
+  </form>
+
+</body>
+</html>
